@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<head>
+
+    <title>WEB_1</title>
+
+</head>
+
+<style>
+
+    .header{
+        font-family: monospace;
+        font-size: large;
+        color:aquamarine;
+        background-color: brown;
+    }
+
+    img{
+        width: 100%;
+        height: 30%;
+    }
+
+    table{
+        border: 4px solid greenyellow;
+    }
+
+    td>table {
+        border: 2px solid gold;
+    }
+
+    input[type="submit"]{
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: white;
+        background-color: black;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 6px gainsboro;
+    }
+  
+    input[type="submit"]:hover {
+        background-color: red;
+    }
+  
+    input[type="submit"]:active {
+        background-color: blue;
+        box-shadow: 0 2px gainsboro;
+        transform: translateY(4px);
+    }
+
+    #result_table {
+        text-align: center;
+    }
+
+    .validation_errors{
+        font-weight: bold;
+        color: red;
+    }
+
+    .validation_errors{
+        font-weight: bold;
+        color: red;
+    }
+
+    ::selection{
+        color: blueviolet;
+    }
+
+    </style>
+
+<body>
+
+    <table width="100%">
+
+        <tr>
+            <th colspan="3" class="header"><h1>Laba nomer odin</h1> Zhuravlev V.E. Variant №1603</th>
+        </tr>
+
+        <tr>
+            <td width= "70%">
+                <img src="images/kazino4.jpg">
+                <img src="images/kazino5.jpg">
+            </td>
+            <td width= "30%">
+                <table>
+                    <tr>
+                        <td colspan="2">
+                            <img src="images/kazino1.jpg">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <img src="images/kazino3.jpg">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width = 50%>
+                            <img src="images/areas.png">
+                        </td>
+                        <td width = 50%>
+                            <form id="form" action="src/script.php" method="GET">
+                                <span>Enter Х value<br>
+                                    <input type="radio" class="x" name="x_coord" value="-5" > -5<br>
+                                    <input type="radio" class="x" name="x_coord" value="-4"> -4<br>
+                                    <input type="radio" class="x" name="x_coord" value="-3"> -3<br>
+                                    <input type="radio" class="x" name="x_coord" value="-2"> -2<br>
+                                    <input type="radio" class="x" name="x_coord" value="-1"> -1<br>
+                                    <input type="radio" class="x" name="x_coord" value="0" checked> 0<br>
+                                    <input type="radio" class="x" name="x_coord" value="1"> 1<br>
+                                    <input type="radio" class="x" name="x_coord" value="2"> 2<br>
+                                    <input type="radio" class="x" name="x_coord" value="3"> 3<br>
+                                </span>
+                                <span>Enter Y value<br>
+                                    <input type="text" name="y_coordinate" class="y" maxlength="16" placeholder="from -5 to 3"><br>
+                                </span>
+                                <span>Enter R value<br>
+                                    <input type="radio" class="r" name="r_coord" value="1" > 1<br>
+                                    <input type="radio" class="r" name="r_coord" value="2"> 2<br>
+                                    <input type="radio" class="r" name="r_coord" value="3" checked> 3<br>
+                                    <input type="radio" class="r" name="r_coord" value="4"> 4<br>
+                                    <input type="radio" class="r" name="r_coord" value="5"> 5<br>
+                                </span>
+                                <br><input type="submit" class="submit_button" value="Submit"/>
+                                <input type="reset" value="Reset"/>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <span class="validation_errors"> <br></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <button type="reset" id="pomoika" onclick="reset()">
+                                <img src="images/pomoika.jpg">
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <tr>
+            <table id="result_table" width="100%">
+                <tr>
+                <th>X</th>
+                <th>Y</th>
+                <th>R</th>
+                <th>RESULT</th>
+                <th>CURRENT TIME</th>
+                <th>RUNNING TIME</th>
+                </tr>
+            </table>
+        </tr>
+
+    </table>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="src/jopaskrip.js"></script>
+</body>
