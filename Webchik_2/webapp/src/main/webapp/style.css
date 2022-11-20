@@ -1,0 +1,62 @@
+    .header{
+        font-family: monospace;
+        font-size: large;
+        color:aquamarine;
+        background-color: brown;
+    }
+
+    img{
+        width: 100%;
+        height: 30%;
+    }
+
+    table{
+        border: 4px solid greenyellow;
+    }
+
+    td>table {
+        border: 2px solid gold;
+    }
+
+    button[class="submit_button"]{
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: white;
+        background-color: black;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 6px gainsboro;
+    }
+
+    button[class="submit_button"]:hover {
+        background-color: red;
+    }
+
+    button[class="submit_button"]:active {
+        background-color: blue;
+        box-shadow: 0 2px gainsboro;
+        transform: translateY(4px);
+    }
+
+    #result_table {
+        text-align: center;
+    }
+
+    .validation_errors{
+        font-weight: bold;
+        color: red;
+    }
+
+    .validation_errors{
+        font-weight: bold;
+        color: red;
+    }
+
+    ::selection{
+        color: blueviolet;
+    }

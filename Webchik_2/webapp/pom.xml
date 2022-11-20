@@ -1,0 +1,63 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<modelVersion>4.0.0</modelVersion>
+<groupId>webapp</groupId>
+<artifactId>webapp</artifactId>
+<version>1.0-SNAPSHOT</version>
+<packaging>war</packaging>
+<name>webapp</name>
+<url>http://maven.apache.org</url>
+<dependencies>
+    <dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>javax.servlet-api</artifactId>
+        <version>4.0.1</version>
+    </dependency>
+    <dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>jstl</artifactId>
+        <version>1.2</version>
+    </dependency>
+</dependencies>
+<build>
+    <finalName>webapp</finalName>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-war-plugin</artifactId>
+            <version>3.3.2</version>
+        </plugin>
+        <plugin>
+            <groupId>org.wildfly.plugins</groupId>
+            <artifactId>wildfly-maven-plugin</artifactId>
+            <version>4.0.0.Beta4</version>
+            <configuration>
+                <port>19701</port>
+                <java-opts>
+                    <java-opt>-Djboss.http.port=19700</java-opt>
+                    <java-opt>-Djboss.management.http.port=19701</java-opt>
+                    <java-opt>-Djboss.https.port=19702</java-opt>
+                    <java-opt>-Djboss.bind.address=0</java-opt>
+                </java-opts>
+                <startupTimeout>3000</startupTimeout>
+                <add-user>
+                    <users>
+                        <user>
+                            <username>vezhur</username>
+                            <password>4444</password>
+                        </user>
+                    </users>
+                </add-user>
+            </configuration>
+        </plugin>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <configuration>
+                <source>17</source>
+                <target>17</target>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
+</project>
