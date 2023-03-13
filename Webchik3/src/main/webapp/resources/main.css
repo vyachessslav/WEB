@@ -1,0 +1,19 @@
+:root {
+        --background-color: #ff05f7;
+        --border-color: #ba8e1e;
+        --element-color: #57e5f7;
+        --point-color: #282e21;
+        --text-color: #571d1d;
+        --shape-color: #7581eb;
+}
+
+html {
+    font-family: 'Brush Script MT';
+    color: var(--text-color);
+    background-image: url(../images/background.png);
+}
+
+fieldset {
+    border-color: transparent;
+    padding: 0;
+}

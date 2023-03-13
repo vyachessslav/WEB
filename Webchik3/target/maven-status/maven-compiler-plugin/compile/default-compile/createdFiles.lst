@@ -1,0 +1,7 @@
+vezhur\web3\HitHandler.class
+vezhur\web3\SQLQuery.class
+vezhur\web3\Coordinates.class
+vezhur\web3\ShotHistory.class
+vezhur\web3\Shot.class
+vezhur\web3\Clock.class
+vezhur\web3\DatabaseConnector.class

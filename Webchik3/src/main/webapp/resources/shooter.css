@@ -1,0 +1,99 @@
+#brawlik {
+    width: 500px;
+    height: 500px;
+    float: left;
+}
+
+#nasru-sosedu {
+    width: 500px;
+    height: 500px;
+    float: right;
+}
+
+#coords {
+    font-size: large;
+    transition: 0.1s;
+    padding: 20px;
+    background-color: var(--background-color);
+}
+
+#coord-form {
+    border-top: 5px solid var(--border-color);
+    border-bottom: 5px solid var(--border-color);
+    background-color: var(--background-color);
+}
+
+#result-table {
+    margin: 25px auto 0 auto;
+    text-align: center;
+    border-top: 2px solid var(--border-color);
+    border-bottom: 2px solid var(--border-color);
+    background-color: var(--background-color);
+}
+
+#result-table th {
+    padding: 2px 45px;
+}
+
+#submit-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 6px gainsboro;
+}
+
+#submit-button:hover {
+    background-color: red;
+}
+
+#submit-button:active {
+    background-color: blue;
+    box-shadow: 0 2px gainsboro;
+    transform: translateY(4px);
+}
+
+svg line {
+    stroke: var(--text-color);
+    stroke-width: 3px;
+}
+
+svg polygon {
+    fill: var(--text-color);
+    stroke: var(--text-color);
+}
+
+svg text {
+    fill: var(--text-color);
+}
+
+.shape {
+    fill: var(--shape-color);
+    stroke-width: 0;
+}
+
+#real-point {
+    fill: var(--point-color);
+}
+
+#flex-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.red-point {
+    fill: #cd0005;
+}
+
+.green-point {
+    fill: #37cd33;
+}
